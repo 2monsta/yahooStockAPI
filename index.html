@@ -1,0 +1,55 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Yahoo Stock Finance Ticker</title>
+	<!-- jquery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<!-- bootstrap -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<!-- bootstrapjs -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<!-- my own script tag -->
+    <script src="script.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12">
+				<h1>Search For Your Favorite Stock</h1>
+				<form action="" class="yahoo-finance-form form-inline">
+					<div class="input-group">
+						<input type="text" class="form-control" id="ticker" placeholder="please enter a stock symbol">
+						<button type="submit" class="btn btn-primary">Fetch me Stocks!</button>
+					</div>
+				</form>
+			</div>
+
+
+			<div class="col-sm-12">
+				<table id="stock-table" class="table table-striped table-bordered">
+					<thead>
+						<tr>
+							<th>Stock Symbol</th>
+							<th>Company Name</th>
+							<th>Ask Price</th>
+							<th>Bid Price</th>
+							<th>Daily Change</th>
+						</tr>
+					</thead>
+					<tbody id="stock-table-body">
+						<tr>
+							<td>-</td>
+							<td>-</td>
+							<td>-</td>
+							<td>-</td>
+							<td>-</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

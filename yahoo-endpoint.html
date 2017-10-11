@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script>
+
+		// 1. url is an endpint. yahoo has told us to come here and follow certain rules, and it will give us dtaa back
+		// if we don't follow the rules, we won't get in trouble but we won't get anything back
+		var url = 'http://query.yahooapis.com/v1/public/yql?q=env%20%27store://datatables.org/alltableswithkeys%27;select%20*%20from%20yahoo.finance.quotes%20where%20symbol%20in%20(%22goog%22)%0A%09%09&env=http%3A%2F%2Fdatatables.org%2Falltables.env&format=json';
+		// $.ajax, $.getJSON;
+		// these are using xmlhttpobject togo fetch data and bring it back
+		console.log("Issuing an ajax request");
+		// getjson takes 2 args:
+		// 	the where(url)
+		// 	code to run when js is back from the request
+		// function comes back will take one arg it will be what js found at the URL
+		$.getJSON(url, (data)=>{
+			console.log(data);
+		});
+		console.log("ajax request send");
+		// JSON is the data, it's a javascript object
+		// AJAX, the means by which Javascript sneaks away ask someone else who's not the html that load
+		// API a someone who has some data, that AJAX can ask
+
+
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
